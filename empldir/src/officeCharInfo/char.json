@@ -1,0 +1,106 @@
+[
+    {
+        "id": 1,
+        "name": "Michael Scott",
+        "image": "https://upload.wikimedia.org/wikipedia/en/d/dc/MichaelScott.png",
+        "department": "Manager",
+        "location": "Scranton, PA",
+        "chartype": "Main"
+    },
+    {
+        "id": 2,
+        "name": "Dwight Schrute",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Dwight_Schrute.jpg/220px-Dwight_Schrute.jpg",
+        "department": "Sales",
+        "location": "Scranton, PA",
+        "chartype": "Main"
+    },
+    {
+        "id": 3,
+        "name": "Jim Halpert",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7e/Jim-halpert.jpg/220px-Jim-halpert.jpg",
+        "department": "Sales",
+        "location": "Scranton, PA",
+        "chartype": "Main"
+    },
+    {
+        "id": 4,
+        "name": "Oscar Martinez",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/5/54/Oscar_Martinez_of_The_Office.jpg/250px-Oscar_Martinez_of_The_Office.jpg",
+        "department": "Accounting",
+        "location": "Scranton, PA",
+        "chartype": "Side"
+    },
+    {
+        "id": 5,
+        "name": "Ryan Howard",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/91/Ryan_Howard_%28The_Office%29.jpg/235px-Ryan_Howard_%28The_Office%29.jpg",
+        "department": "Temp",
+        "location": "Scranton, PA",
+        "chartype": "Main"
+    },
+    {
+        "id": 6,
+        "name": "Andy Bernard",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Andy_Bernard_photoshot.jpg/250px-Andy_Bernard_photoshot.jpg",
+        "department": "Sales",
+        "location": "Scranton, PA",
+        "chartype": "Main"
+    },
+    {
+        "id": 7,
+        "name": "Pam Beesly",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Pam_Beesley.jpg/220px-Pam_Beesley.jpg",
+        "department": "Reception",
+        "location": "Scranton, PA",
+        "chartype": "Main"
+    },
+    {
+        "id": 8,
+        "name": "Stanley Hudson",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Stanley_Hudson.jpg/245px-Stanley_Hudson.jpg",
+        "department": "Sales",
+        "location": "Scranton, PA",
+        "chartype": "Side"
+    },
+    {
+        "id": 9,
+        "name": "David Wallace",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/David_Wallace_%28The_Office%29.jpg/250px-David_Wallace_%28The_Office%29.jpg",
+        "department": "Corporate",
+        "location": "New York City, NY",
+        "chartype": "Side"
+    },
+    {
+        "id": 10,
+        "name": "Phyllis Vance",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/Phyllis_Lapin-Vance.jpg/220px-Phyllis_Lapin-Vance.jpg",
+        "department": "Sales",
+        "location": "Scranton, PA",
+        "chartype": "Side"
+    },
+    {
+        "id": 11,
+        "name": "Angela Martin",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Angela_Martin.jpg/230px-Angela_Martin.jpg",
+        "department": "Accounting",
+        "location": "Scranton, PA",
+        "chartype": "Side"
+    },
+    {
+        "id": 12,
+        "name": "Kevin Malone",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/60/Office-1200-baumgartner1.jpg/260px-Office-1200-baumgartner1.jpg",
+        "department": "Accounting",
+        "location": "Scranton, PA",
+        "chartype": "Side"
+    },
+    {
+        "id": 13,
+        "name": "Jan Levinson",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d1/Melora_Hardin_as_Jan_Levinson.png/250px-Melora_Hardin_as_Jan_Levinson.png",
+        "department": "Corporate",
+        "location": "New York City, NY",
+        "chartype": "Side"
+    }
+]
