@@ -1,0 +1,10 @@
+.wrap{
+    background-color: hotpink;
+}
+
+.card{
+    border-style: solid; 
+    border-color: black; 
+    border-width: 3px;
+    box-shadow: 7px 7px 10px black;
+}

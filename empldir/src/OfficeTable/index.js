@@ -6,28 +6,31 @@ import Table from 'react-bootstrap/Table';
 
 function officeTable(props) {
     return (
-        <div>
-            <Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Department</th>
-                        <th>Location</th>
-                        <th>Character Type</th>
-                    </tr>
-                </thead>
-                {props.characters.map(char => (
-                    <tbody>
-                        <tr key={char.id}>
-                            <td>{char.name}</td>
-                            <td>{char.department}</td>
-                            <td>{char.location}</td>
-                            <td>{char.chartype}</td>
-                        </tr>
-                    </tbody>
-                ))}
-            </Table>
-        </div>
+                    <Table striped bordered hover>
+                        <thead className="text-center w-auto">
+                            <tr>
+                                <th>The Office Character</th>
+                                <th>Name</th>
+                                <th>Department</th>
+                            </tr>
+                        </thead>
+                        {props.filteredCharacters.map(char => (
+                            <tbody key={char.id} className="text-center">
+                                <tr>
+                                    <td>
+                                        <img alt={char.name} className="officeImage" src={char.image} />
+                                    </td>
+                                    <td>
+                                        <h5>{char.name}</h5>
+                                    </td>
+                                    <td>
+                                        <h5>{char.department}</h5>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        ))}
+                    </Table>
+
     );
 }
 
