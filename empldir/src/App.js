@@ -7,34 +7,90 @@ import characters from "./officeCharInfo/char.json";
 class App extends Component {
   state = {
     characters: characters,
-    filteredCharacters: characters
+    filteredCharacters: characters,
+    alphabetCharacters: []
   };
 
 
   handleInputChange = event => {
     const { name, value } = event.target;
-    console.log(value)
     this.setState({
       [name]: value
     });
   };
 
-  departmentFilter = (e) => {
+  searchFilter = (e) => {
     e.preventDefault();
     const { value } = e.target
     this.setState(prevState => ({
       ...prevState,
       filteredCharacters: prevState.characters.filter(char => char.name.substring(0, value.length).toLowerCase() === value.toLowerCase())
     }))
+  };
+
+  backToMainList = (e) => {
+    e.preventDefault();
+    this.setState(({ filteredCharacters: characters }))
+  };
+
+  alphabetical = (e) => {
+    e.preventDefault();
+    const alphabet = this.state.characters.sort(function (a, b) {
+      const nameA = a.name.toLowerCase(), nameB = b.name.toLowerCase()
+      if (nameA < nameB)
+        return -1
+      if (nameA > nameB)
+        return 1
+      return 0
+    })
+    this.setState(({ alphabetCharacters: alphabet }))
+  };
+
+  salesFilter = (e) => {
+    e.preventDefault();
+    this.setState(prevState => ({
+      ...prevState,
+      filteredCharacters: prevState.characters.filter(char => char.department === "Sales")
+    }))
+  }
+
+  accountingFilter = (e) => {
+    e.preventDefault();
+    this.setState(prevState => ({
+      ...prevState,
+      filteredCharacters: prevState.characters.filter(char => char.department === "Accounting")
+    }))
+  }
+  corporateFilter = (e) => {
+    e.preventDefault();
+    this.setState(prevState => ({
+      ...prevState,
+      filteredCharacters: prevState.characters.filter(char => char.department === "Corporate")
+    }))
+  }
+  managerFilter = (e) => {
+    e.preventDefault();
+    this.setState(prevState => ({
+      ...prevState,
+      filteredCharacters: prevState.characters.filter(char => char.department === "Manager")
+    }))
   }
 
   render() {
     return (
-      <div className>
+      <div>
+        <button onClick={this.salesFilter}>Sales</button>
+        {/* <button onClick={this.accountingFilter}>Accounting</button>
+        <button onClick={this.corporateFilter}>Corporate</button>
+        <button onClick={this.managerFilter}>Manager</button> */}
+        <button onClick={this.backToMainList}>back to main list</button>
+        <button onClick={this.alphabetical}>Alphabetical</button>
         <OfficeForm
           value={this.state.charSearch}
           onChange={this.handleInputChange}
-          departmentFilter={this.departmentFilter}
+          searchFilter={this.searchFilter}
+          onClick={this.salesFilter}
+          // alphabetical={this.alphabetical}
         />
         <OfficeTable
           filteredCharacters={this.state.filteredCharacters}

@@ -7,8 +7,8 @@ import Dropdown from 'react-bootstrap/Dropdown'
 
 function officeForm(props) {
     return (
-        // <div className="wrap">
-            <div className="wrap row">
+        <div className="wrap">
+            <div className="row">
                 <div className="col-lg-3"></div>
                 <div className="col-lg-3">
                     <Card className="my-5 mx-1 text-center">
@@ -16,8 +16,11 @@ function officeForm(props) {
                             <Form>
                                 <Form.Group controlId="formBasicText">
                                     <Form.Label >Search character from list</Form.Label>
-                                    <Form.Control value={props.charSearch} onChange={event => {props.onChange(event); props.departmentFilter(event)}} name="charSearch"  type="text" placeholder="e.g. 'Michael Scott'" />
+                                    <Form.Control value={props.charSearch} onChange={event => { props.onChange(event); props.searchFilter(event) }} type="text" placeholder="e.g. 'Michael Scott'" />
                                 </Form.Group>
+                                <Button className="my-2" variant="danger" type="submit">
+                                ← Back to List
+                                </Button>
                             </Form>
                         </Card.Body>
                     </Card>
@@ -35,17 +38,17 @@ function officeForm(props) {
                                 </Dropdown.Toggle>
 
                                 <Dropdown.Menu>
-                                    <Dropdown.Item onClick={props.departmentFilter} >Sales</Dropdown.Item>
+                                    <Dropdown.Item onClick={props.salesFilter} >Sales</Dropdown.Item>
                                     <Dropdown.Item href="#/action-2">Accounting</Dropdown.Item>
                                     <Dropdown.Item href="#/action-3">Corporate</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-1">Manager</Dropdown.Item>
+                                    <Dropdown.Item onClick={props.managerFilter}>Manager</Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>
                         </Card.Body>
                     </Card>
                 </div>
             </div>
-        // </div>
+        </div>
     );
 }
 
