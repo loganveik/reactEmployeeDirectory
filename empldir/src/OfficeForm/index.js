@@ -28,7 +28,7 @@ function officeForm(props) {
                 <div className="col-lg-3">
                     <Card className="my-5 mx-1 text-center">
                         <Card.Body>
-                            <Button className="my-2" variant="success" type="submit">
+                            <Button onClick={props.alphabetical} className="my-2" variant="success" type="submit">
                                 Sort by Alphabetical Order
                             </Button>
 
@@ -39,8 +39,8 @@ function officeForm(props) {
 
                                 <Dropdown.Menu>
                                     <Dropdown.Item onClick={props.salesFilter} >Sales</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2">Accounting</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Corporate</Dropdown.Item>
+                                    <Dropdown.Item onClick={props.accountingFilter}>Accounting</Dropdown.Item>
+                                    <Dropdown.Item onClick={props.corporateFilter}>Corporate</Dropdown.Item>
                                     <Dropdown.Item onClick={props.managerFilter}>Manager</Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>

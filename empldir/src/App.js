@@ -79,18 +79,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.salesFilter}>Sales</button>
-        {/* <button onClick={this.accountingFilter}>Accounting</button>
-        <button onClick={this.corporateFilter}>Corporate</button>
-        <button onClick={this.managerFilter}>Manager</button> */}
-        <button onClick={this.backToMainList}>back to main list</button>
-        <button onClick={this.alphabetical}>Alphabetical</button>
         <OfficeForm
           value={this.state.charSearch}
           onChange={this.handleInputChange}
           searchFilter={this.searchFilter}
-          onClick={this.salesFilter}
-          // alphabetical={this.alphabetical}
+          salesFilter={this.salesFilter}
+          accountingFilter={this.accountingFilter}
+          managerFilter={this.managerFilter}
+          corporateFilter={this.corporateFilter}
+          alphabetical={this.alphabetical}
         />
         <OfficeTable
           filteredCharacters={this.state.filteredCharacters}
